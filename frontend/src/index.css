@@ -11,6 +11,11 @@ main{
   flex: 1;
 }
 
+.btn-primary{
+  background-color: #f0c040;
+  color: #000;
+}
+
 .site-container{
   min-height: 100vh;
 }
@@ -33,4 +38,8 @@ main{
 }
 .product-info{
   padding: 1rem;
+}
+
+.rating span{
+  color: #ffc000;
 }
