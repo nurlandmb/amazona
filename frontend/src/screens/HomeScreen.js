@@ -4,6 +4,8 @@ import logger from 'use-reducer-logger';
 import { Row, Col } from 'react-bootstrap';
 import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -32,6 +34,7 @@ function HomeScreen() {
         const result = await axios.get('/api/products');
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (error) {
+        console.log(error);
         dispatch({ type: 'FETCH_FAIL', payload: error.message });
       }
     };
@@ -45,9 +48,9 @@ function HomeScreen() {
       </Helmet>
       <h1>Featured Products</h1>
       {loading ? (
-        <div>Loading</div>
+        <LoadingBox />
       ) : error ? (
-        <div>{error.message}</div>
+        <MessageBox variant="danger" children={error} />
       ) : (
         <div className="products">
           <Row>
