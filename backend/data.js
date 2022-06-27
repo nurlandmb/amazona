@@ -1,4 +1,20 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+  users: [
+    {
+      name: 'Nurlan',
+      email: 'nzt.dmb@gmail.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: true
+    },
+    {
+      name: 'Basir',
+      email: 'basir@gmail.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: false
+    },
+  ],
   products: [
     {
       name: 'Nike slim shirt',
@@ -35,7 +51,6 @@ const data = {
       rating: 4.5,
       numReviews: 14,
       description: 'high quality pant',
-      
     },
     {
       name: 'Adidas slim pant',
@@ -48,9 +63,8 @@ const data = {
       rating: 4.5,
       numReviews: 10,
       description: 'high quality pant',
-      
     },
   ],
 };
 
-export default data
+export default data;
