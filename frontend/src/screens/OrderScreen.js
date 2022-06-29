@@ -106,7 +106,7 @@ function OrderScreen() {
             <Card.Body>
               <Card.Title>Items</Card.Title>
               <ListGroup variant="flush">
-                {order.orderItems.map((item) => (
+                {order.orderItems.map((item) => 
                   <ListGroup.Item key={item._id}>
                     <Row className="align-items-center">
                       <Col md="6">
@@ -123,7 +123,7 @@ function OrderScreen() {
                       <Col md="3">${item.price}</Col>
                     </Row>
                   </ListGroup.Item>
-                ))}
+                )}
               </ListGroup>
             </Card.Body>
           </Card>
