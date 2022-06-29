@@ -11,13 +11,15 @@ main{
   flex: 1;
 }
 
-.btn-primary{
+.btn-primary,
+.btn-outline-primary{
   background-color: #f0c040;
   color: #000;
 }
 
 .site-container{
   min-height: 100vh;
+  transition: .4s;
 }
 
 .products{
@@ -60,4 +62,22 @@ main{
 .checkout-steps > div.active{
   border-bottom: .2rem solid #f0c040;
   color: #f0c040;
+}
+
+.navbar-brand{
+  font-weight: bold;
+}
+.side-navbar{
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  left: -300px;
+  background-color: #100901;
+  transition: .5s;
+}
+.active-container{
+  margin-left: 240px;
+}
+.active-nav{
+  left: 0;
 }
