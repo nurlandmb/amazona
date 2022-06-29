@@ -26,6 +26,7 @@ import ProfileScreen from './screens/ProfileScreen';
 import { getError } from './utils';
 import axios from 'axios';
 import SearchBox from './components/SearchBox';
+import SearchScreen from './screens/SearchScreen';
 // Hello world
 function App() {
   const [sideBarIsOpen, setSideBarIsOpen] = useState(false);
@@ -147,6 +148,7 @@ function App() {
               <Route path="/" element={<HomeScreen />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/signin" element={<SignInScreen />} />
+              <Route path="/search" element={<SearchScreen />} />
               <Route path="/signup" element={<SignUpScreen />} />
               <Route path="/shipping" element={<ShippingScreen />} />
               <Route path="/payment" element={<PaymentMethodScreen />} />
