@@ -4,7 +4,7 @@
   "description": "1. Instruction\r 2. Install tools\r 3. Create app\r 4. Create git repo",
   "main": "index.js",
   "scripts": {
-    "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
+    "build": "cd backend && npm install && cd ../frontend && npm install && npm run build --legacy-peer-deps",
     "start": "node backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
